@@ -1,0 +1,2 @@
+Selenide.executeJavaScript("return await new Promise((resolve) => fetch(location.href).then(response => resolve(response.status)))");
+ 
