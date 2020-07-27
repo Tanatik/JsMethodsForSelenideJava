@@ -1,0 +1,19 @@
+public class JSMethodsForSelenide {
+
+    public static String getCookieValue() {
+        return Selenide.executeJavaScript("return document.cookie");
+    }
+
+    public static String getLocalStorageValueOfAdvice(String varibleName) {
+        return Selenide.executeJavaScript("return window.localStorage.getItem('" + varibleName + "');");
+    }
+
+    public static String getAmount(String elementId) {
+        return Selenide.executeJavaScript("return document.getElementById('" + elementId + "').value");
+    }
+
+    public static long getPageResponseStatus(){
+       return Selenide.executeJavaScript("return await new Promise((resolve) => fetch(location.href).then(response => resolve(response.status)))");
+    }
+}
+ 
