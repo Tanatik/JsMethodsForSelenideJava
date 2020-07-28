@@ -8,7 +8,7 @@ public class JSMethodsForSelenide {
         return Selenide.executeJavaScript("return window.localStorage.getItem('" + varibleName + "');");
     }
 
-    public static String getAmount(String elementId) {
+    public static String getElementValue(String elementId) {
         return Selenide.executeJavaScript("return document.getElementById('" + elementId + "').value");
     }
 
